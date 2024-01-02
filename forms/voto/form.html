@@ -1,0 +1,98 @@
+<!-- Botón para apertura de la ventana modal -->
+	<button type="button" class="btn btn-primary" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#pollModal">
+	  <h3><i class="fa-solid fa-person-booth"></i></h3>Ver Formulario de Votación
+	</button>
+
+<!-- Modal para Formulario de Votación -->
+	<div class="modal fade" id="pollModal" tabindex="-1" aria-labelledby="pollModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="pollModalLabel">FORMULARIO DE VOTACIÓN:</h5>
+			<button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal" aria-label="Cerrar"></button>
+		  </div>
+		  
+		  <div class="modal-body">
+		  <form id="form-voto" action="#" style="line-height:16px">
+			<div class="row">
+			  <div class="col-4"><label for="nombre">Nombre y Apellido</label></div>
+			  <div class="col-4"><input name="nombre" type="text" placeholder="Nombre y Apellido" required="Ingrese su <i><b>Nombre y Apellido</b></i>"/></div>
+			  <div class="col-4"><error for="nombre"></error></div>
+			</div>
+			<div class="row">
+			  <div class="col-4"><label for="alias">Alias</label></div>
+			  <div class="col-4"><input name="alias" id="alias" type="text" placeholder="Alias" required="Ingrese un <i><b>Alias</b></i>" validator="AliasError"/></div>
+			  <div class="col-4"><error for="alias"></error></div>
+			</div>
+			<div class="row">
+			  <div class="col-4">RUT</div>
+			  <div class="col-4"><input name="rut" id="rut" type="text" placeholder="00.000.000-0" required="Ingrese su <i><b>RUT</b></i>" validator="RutError"/></div>
+			  <div class="col-4"><error for="rut"></error></div>
+			</div>
+			<div class="row">
+			  <div class="col-4">Email</div>
+			  <div class="col-4"><input name="email" id="email" type="text" placeholder="direccion@dominio.ext" required="Ingrese su <i><b>E-Mail</b></i>" validator="EmailError"/></div>
+			  <div class="col-4"><error for="email"></error></div>
+			</div>
+			<div class="row">
+			  <div class="col-4">Región</div>
+			  <div class="col-4"><select name="region" id="selectRegiones" required="Seleccione la <i><b>Región</b></i>"></select></div>
+			  <div class="col-4"><error for="region"></error></div>
+			</div>
+			<div class="row">
+			  <div class="col-4">Comuna</div>
+			  <div class="col-4"><select name="comuna" id="selectComunas" required="Seleccione la <i><b>Comuna</b></i>"></select></div>
+			  <div class="col-4"><error for="comuna"></error></div>
+			</div>
+			<div class="row">
+			  <div class="col-4">Candidato</div>
+			  <div class="col-4"><select name="candidato" id="selectCandidatos" required="Escoja el <i><b>Candidato</b></i>"></select></div>
+			  <div class="col-4"><error for="candidato"></error></div>
+			</div>
+			<div class="row">
+			  <div class="col-4">Como se enteró de Nosotros</div>
+			  <div class="col-8">
+				<div class="row" style="height:30px">
+				  <div class="col-2">
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" name="difusion" type="checkbox" id="dif_web" value="web" />
+						<label class="form-check-label" for="dif_web">Web</label>
+					</div>
+				  </div>
+				  
+				  <div class="col-2">
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" name="difusion" type="checkbox" id="dif_tv" value="tv" />
+						<label class="form-check-label" for="dif_tv">TV</label>
+					</div>
+				  </div>
+				  
+				  <div class="col-4">
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" name="difusion" type="checkbox" id="dif_social" value="rs" />
+						<label class="form-check-label" for="dif_social">Redes Sociales</label>
+					</div>
+				  </div>
+				  
+				  <div class="col-4">
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" name="difusion" type="checkbox" id="dif_amigo" value="amigo" />
+						<label class="form-check-label" for="dif_amigo">Amigo</label>
+					</div>
+				  </div>
+				</div>
+				<div class="row">
+					<error for="difusion"></error>
+				</div>
+			  </div>
+			</div>
+			</form>
+		  </div>
+		  
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-mdb-dismiss="modal" style="width:120px"><h3><i class="fa-regular fa-circle-xmark"></i></h3>Cerrar</button>
+			<button type="button" class="btn btn-primary btn-submit-vote" style="width:120px"><h3><i class="fa-solid fa-check-to-slot"></i></h3>Votar</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
