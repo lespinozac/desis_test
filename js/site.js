@@ -124,7 +124,8 @@
 			
 			// Se realiza la solicitud al servidor mediante el controlador respectivo
 			struct = handleTask(data, 'save', 'forms/' + currentForm + '/handlers/form.php');
-			alert(struct.error);
+			if (struct.error != "" || struct.message != "")
+				alert((struct.error + " " + struct.message).trim());
 		}
 		else{
 			alert("No se pudo enviar el voto. Por favor verifique los campos ingresados e intente nuevamente");

@@ -1,0 +1,30 @@
+####Antes de comenzar
+
+	Ruta del proyecto: https://github.com/lespinozac/desis_test.git
+	Para este desarrollo se utilizó la versión de PHP 8.2.4, en conjunto con el servidor de base de datos MariaDB versión 10.4.28.
+	El script sql de la base de datos se encuentra en la ruta “desis_test/sql/db_desis_test.sql“ del proyecto.
+
+
+
+####Cómo instalar el proyecto
+
+Para simplificar el test de la aplicación, éste puede hacerse desde el entorno de desarrollo XAMPP, ya que necesitaremos el servidor de aplicaciones Apache y el motor de base de datos MariaDB (MySQL). Para ello, si no tenemos instalado este paquete, se puede descargar de la página oficial e instalarlo en un equipo personal.
+
+Una vez instalado el paquete XAMPP, ejecute el panel de control y asegúrese de que los módulos Apache y MySQL estén funcionando, si no es así, inícielos haciendo click en el botón Start respectivo. Las etiquetas de los módulos iniciados cambiarán a color verde, indicando que los servicios están en ejecución y listos para ser usados.
+
+Para añadir el sitio o aplicación web al servidor de aplicaciones Apache, localice la carpeta raíz del localhost. Generalmente esta ruta es *'C:\xampp\htdocs'*.
+Puede copiar manualmente la carpeta *‘desis_test’* al directorio *htdocs* o puede clonar el repositorio desde esta última carpeta:
+
+	C:\xampp\htdocs>git clone https://github.com/lespinozac/desis_test.git
+
+Si el servidor de aplicaciones Apache está ejecutándose, ya podrá verse la aplicación en su navegador accediendo a “*localhost/desis_test/*”, aunque no se realizarán las tareas de acceso a datos, como la carga de la información que debe ir en los campos select del formulario. Para esto, es necesario ejecutar el script de creación de la base de datos.
+
+El script de la base de datos se llama *db_desis_test.sql* y se encuentra dentro de las ruta *'desis_test/sql'* Este script creará la base de datos completamente (CREATE DATABASE) y añadirá al usuario por defecto con su respectivos permisos para acceder a ella desde el sistema.
+
+Se recomienda que se ejecute el script desde el administrador phpMyAdmin, al cual se puede acceder a través de http://localhost/phpmyadmin.
+
+	Una vez cargado phpMyAdmin, seleccione el botón Importar de la parte superior de la aplicación.
+	Utilizando el botón Examinar, localice el script en la ruta 'desis_test/sql/db_desis_test.sql' y ábralo.
+	Una vez abierto el script, desplácese abajo, hasta el final de la página y presione el botón Importar.
+	
+Si el script se ejecutó correctamente se habrá creado la base de datos **db_desis_test** con los datos de regiones, comunas, provincias y candidatos contenidos en ella y ya se podrá utilizar la aplicación accediendo desde el navegador a la dirección **http://localhost/desis_test/**
